@@ -26,4 +26,12 @@ defmodule BakeSample.MixProject do
       {:bakeware, "~> 0.2.0"},
     ]
   end
+
+  def release do
+  [
+    demo: [
+      steps: [:assemble, &Bakeware.assemble/1]
+    ]
+  ]
+  end
 end
